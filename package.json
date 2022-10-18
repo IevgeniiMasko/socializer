@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start-server": "node server.js",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm install && npm run install-client && npm run build",
+    "start": "npm install && npm run install-client && npm run build && npm run start-server",
     "dev": "nodemon server"
   },
   "type": "module",

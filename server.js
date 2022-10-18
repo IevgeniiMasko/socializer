@@ -48,6 +48,7 @@ app.use(bodyParser.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: false }));
 // when json is submitted
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "/client/build")));
 
 app.get("/", (req, res, next) => {
   res.sendFile(path.join(__dirname, "/index.html"));
@@ -61,10 +62,10 @@ app.use(verifyJWT);
 app.use("/account", userRoute);
 app.use("/post", postRoute);
 
-if (process.env.NODE_ENV === "production") {
-  //server static files
-  app.use(express.static(path.join(__dirname, "/public")));
-}
+// if (process.env.NODE_ENV === "production") {
+//   //server static files
+//   app.use(express.static(path.join(__dirname, "/public")));
+// }
 
 (async () => {
   try {
