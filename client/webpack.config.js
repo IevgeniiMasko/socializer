@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
-const isDev = process.env.NODE_ENV === "development";
+// const isDev = process.env.NODE_ENV === "development";
 
 module.exports = {
   entry: {
