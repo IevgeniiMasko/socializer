@@ -1,0 +1,43 @@
+.people-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  &__head {
+    min-height: 70px;
+    background-color: lightblue;
+  }
+
+  &__body {
+    // min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 20px 10px;
+    margin-top: -20px;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__user-info {
+    font-size: 18px;
+  }
+
+  &__photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__follow {
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: rgba(151, 228, 229, 0.517);
+  }
+
+  &__unfollow {
+    background-color: rgba(229, 181, 151, 0.517);
+  }
+}

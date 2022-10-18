@@ -1,0 +1,37 @@
+version: "3"
+services:
+  # backend:
+  #   container_name: backend
+  #   image: socializer:1.1
+  #   build: .
+  #   restart: unless-stopped
+  #   ports:
+  #     - "3500:3500"
+  #   links:
+  #     - mongodb
+  mongodb:
+    container_name: mongo-dev
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - myapp:/data/db
+  mongo-express:
+    container_name: mongo-express
+    image: mongo-express
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+    links:
+      - mongodb
+volumes:
+  myapp:
+    driver: local

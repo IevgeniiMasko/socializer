@@ -1,0 +1,26 @@
+.photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 3px;
+  cursor: pointer;
+}
+
+.photo-sub {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 95%;
+  height: 95%;
+  // margin: 3px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,25 @@
+.item-menu {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  cursor: pointer;
+
+  &__icon {
+    background-color: #fff;
+    background: lightblue;
+    border-radius: 50%;
+    color: #000;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    & > * {
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  &__name {
+    font-size: 17px;
+  }
+}

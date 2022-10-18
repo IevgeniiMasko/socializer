@@ -1,0 +1,11 @@
+.newsfeed {
+  padding: 10px;
+  position: relative;
+  top: var(--header-height);
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+.followers {
+  padding: 10px;
+  // position: relative;
+  // top: var(--header-height);
+
+  &__body {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+  }
+
+  &__body > * {
+    flex: 0 0 47%;
+  }
+}

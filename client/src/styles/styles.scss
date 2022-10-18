@@ -1,0 +1,19 @@
+@import "_nullstyle";
+
+:root {
+  --header-height: 100px;
+
+  --font-color-main: #017398;
+
+  --bg-color: #eff1f6;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: #017398;
+}
+
+.container {
+  width: 60%;
+  margin-left: 25%;
+}

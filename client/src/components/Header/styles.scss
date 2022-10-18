@@ -1,0 +1,82 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: #fff;
+  height: var(--header-height);
+  // overflow: hidden;
+  padding: 0 30px 0 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  &__icon > * {
+    width: 80%;
+    height: 80%;
+  }
+
+  &__name {
+    font-size: 2.5rem;
+  }
+}
+
+.search {
+  flex: 0 1 45%;
+
+  padding: 15px;
+  background-color: var(--bg-color);
+  border-radius: 30px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  &__icon {
+    color: rgba(0, 0, 0, 0.213);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.469);
+  }
+}
+
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.header-right {
+  flex: 0 0 15%;
+
+  flex: 0 1 15%;
+  display: flex;
+  justify-content: space-between;
+
+  & > * {
+    color: var(--font-color-main);
+    cursor: pointer;
+  }
+
+  &_rotate {
+    animation: rotation 4s infinite linear;
+  }
+}
